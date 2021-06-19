@@ -1,7 +1,7 @@
 require('esbuild').serve({
   port: 8000,
   host: '127.0.0.1',
-  servedir: 'www'
+  servedir: 'public'
 }, {
   entryPoints: ['src/index.js'],
   bundle: true,
@@ -9,7 +9,7 @@ require('esbuild').serve({
   inject: ['./react-shim.js'],
   target: ['es2020'],
   splitting: true,
-  outdir: 'www',
+  outdir: 'public',
   format: 'esm',
 }).then(server => {
   const { port, host } = server
