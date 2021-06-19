@@ -12,6 +12,7 @@ require('esbuild').serve({
   outdir: 'www',
   format: 'esm',
 }).then(server => {
-  // Call "stop" on the web server when you're done
-  //server.stop()
+  const { port, host } = server
+  
+  console.log(`Serving on http://${host}:${port}`)
 })
