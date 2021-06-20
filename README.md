@@ -11,5 +11,5 @@ cd my-react-project
 
 npm install
 
-npm run start
+npm run dev
 ```
