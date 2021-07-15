@@ -1,7 +1,12 @@
 require('esbuild').buildSync({
   entryPoints: ['src/index.js'],
   bundle: true,
-  loader: { '.js': 'jsx' },
+  loader: {
+    '.js': 'jsx',
+    '.svg': 'dataurl',
+    '.png': 'dataurl',
+    '.jpg': 'dataurl'
+  },
   inject: ['./react-shim.js'],
   minify: true,
   sourcemap: true,
